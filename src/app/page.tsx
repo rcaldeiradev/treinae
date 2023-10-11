@@ -1,5 +1,4 @@
 import ExerciseCard from '@/components/ExerciseCard/ExerciseCard';
-import { Exercise } from '@/types';
 import { Metadata } from 'next';
 import { exercisesList } from '@/lib/exercises';
 
