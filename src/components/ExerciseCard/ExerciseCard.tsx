@@ -1,6 +1,7 @@
 import { Exercise } from '@/types';
 import Player from '@/components/Player';
-import ExerciseCardInfo from '@/components/ExerciseCardInfo';
+import ExerciseCardInfo from '@/components/ExerciseCard/ExerciseCardInfo';
+import ExerciseCompletionToggle from '@/components/ExerciseCard/ExerciseCompletionToggle';
 
 interface ExerciseCardProps {
   exercise: Exercise;
@@ -19,6 +20,8 @@ export default function ExerciseCard({
 }: ExerciseCardProps) {
   return (
     <article className="exercise-card bg-white h-full rounded-2xl overflow-hidden">
+      <ExerciseCompletionToggle />
+
       <div className="media-wrapper">
         <Player
           videoTitle={title}

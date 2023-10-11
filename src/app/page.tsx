@@ -1,4 +1,4 @@
-import ExerciseCard from '@/components/ExerciseCard';
+import ExerciseCard from '@/components/ExerciseCard/ExerciseCard';
 import { Exercise } from '@/types';
 
 const exercises: Array<Exercise> = [

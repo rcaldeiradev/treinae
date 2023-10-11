@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ExerciseCardInfo from '../../src/components/ExerciseCardInfo';
+import ExerciseCardInfo from '../../src/components/ExerciseCard/ExerciseCardInfo';
 
 it('renders the series number, followed by an "x"', () => {
   const { getByTestId } = render(
