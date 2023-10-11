@@ -20,7 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-200 container mx-auto`}>
+      <body
+        className={`${inter.className} bg-gray-200 container mx-auto mb-20`}
+      >
         <Header />
 
         <div className="content">{children}</div>
