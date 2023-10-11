@@ -1,11 +1,9 @@
 export interface Exercise {
   title: string;
+  videoUrl: string;
+  previewImgUrl: string;
   series: number;
   intervalSeconds: number;
-  video: string;
-  previewImg: string;
-  reps: {
-    min: number;
-    max?: number;
-  };
+  minReps: number;
+  maxReps: number;
 }
