@@ -1,7 +1,6 @@
 import { Exercise } from '@/types';
 import Player from '@/components/Player';
-import ExerciseCardInfo from '@/components/ExerciseCard/ExerciseCardInfo';
-import ExerciseCompletionToggle from '@/components/ExerciseCard/ExerciseCompletionToggle';
+import Info from '@/components/ExerciseCard/Info';
 
 interface ExerciseCardProps {
   exercise: Exercise;
@@ -19,9 +18,7 @@ export default function ExerciseCard({
   },
 }: ExerciseCardProps) {
   return (
-    <article className="exercise-card bg-white h-full rounded-2xl overflow-hidden">
-      <ExerciseCompletionToggle />
-
+    <article className="exercise-card bg-white h-full rounded-2xl overflow-hidden relative">
       <div className="media-wrapper">
         <Player
           videoTitle={title}
@@ -33,7 +30,7 @@ export default function ExerciseCard({
       <div className="texts-wrapper p-4">
         <h2 className="text-lg font-bold mb-2">{title}</h2>
 
-        <ExerciseCardInfo
+        <Info
           series={series}
           intervalSeconds={intervalSeconds}
           minReps={minReps}

@@ -1,15 +1,10 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ExerciseCardInfo from '../../src/components/ExerciseCard/ExerciseCardInfo';
+import Info from '../../../src/components/ExerciseCard/Info';
 
 it('renders the series number, followed by an "x"', () => {
   const { getByTestId } = render(
-    <ExerciseCardInfo
-      series={3}
-      intervalSeconds={45}
-      minReps={12}
-      maxReps={15}
-    />,
+    <Info series={3} intervalSeconds={45} minReps={12} maxReps={15} />,
   );
   const renderedSeries = getByTestId('series');
 
@@ -19,7 +14,7 @@ it('renders the series number, followed by an "x"', () => {
 
 it('renders the reps in a single number', () => {
   const { getByTestId } = render(
-    <ExerciseCardInfo series={3} intervalSeconds={45} minReps={12} />,
+    <Info series={3} intervalSeconds={45} minReps={12} />,
   );
 
   const renderedReps = getByTestId('reps');
@@ -30,7 +25,7 @@ it('renders the reps in a single number', () => {
 
 it('renders the interval seconds, followed by an "s"', () => {
   const { getByTestId } = render(
-    <ExerciseCardInfo series={3} intervalSeconds={60} minReps={12} />,
+    <Info series={3} intervalSeconds={60} minReps={12} />,
   );
   const renderedInterval = getByTestId('interval');
 
@@ -40,12 +35,7 @@ it('renders the interval seconds, followed by an "s"', () => {
 
 it('renders the reps in a range format separated by "/"', () => {
   const { getByTestId } = render(
-    <ExerciseCardInfo
-      series={4}
-      intervalSeconds={50}
-      minReps={10}
-      maxReps={12}
-    />,
+    <Info series={4} intervalSeconds={50} minReps={10} maxReps={12} />,
   );
   const renderedReps = getByTestId('reps');
 

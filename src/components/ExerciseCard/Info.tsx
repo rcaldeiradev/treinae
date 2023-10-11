@@ -1,3 +1,5 @@
+import CompletionToggle from '@/components/ExerciseCard/CompletionToggle';
+
 interface ExerciseCardInfoProps {
   series: number;
   intervalSeconds: number;
@@ -5,7 +7,7 @@ interface ExerciseCardInfoProps {
   maxReps?: number;
 }
 
-export default function ExerciseCardInfo({
+export default function Info({
   series,
   intervalSeconds,
   minReps,
@@ -43,6 +45,8 @@ export default function ExerciseCardInfo({
         <span data-testid={'interval'}>{buildIntervalSecondsValue()}</span>
         <div className="text-xs font-semibold text-gray-600">Intervalo</div>
       </div>
+
+      <CompletionToggle className="" />
     </div>
   );
 }

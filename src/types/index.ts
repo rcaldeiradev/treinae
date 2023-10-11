@@ -5,5 +5,5 @@ export interface Exercise {
   series: number;
   intervalSeconds: number;
   minReps: number;
-  maxReps: number;
+  maxReps?: number;
 }

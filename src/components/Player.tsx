@@ -51,6 +51,7 @@ export default function Player({
           muted={true}
           loop={true}
           aria-label={videoTitle}
+          className="w-full h-full"
         >
           <source src={videoPath} />
         </video>

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ExerciseCard from '../../src/components/ExerciseCard/ExerciseCard';
+import ExerciseCard from '../../../src/components/ExerciseCard/ExerciseCard';
 
 const exercise = {
   title: 'Agachamento unilateral barra guiada',

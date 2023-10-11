@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import ExerciseCompletionToggle from '../../src/components/ExerciseCard/ExerciseCompletionToggle';
+import CompletionToggle from '../../../src/components/ExerciseCard/CompletionToggle';
 
 it('should have the status of "checked" on click, if not checked', async () => {
-  const { getByLabelText } = render(<ExerciseCompletionToggle />);
+  const { getByLabelText } = render(<CompletionToggle />);
   const user = userEvent.setup();
   const checkbox = getByLabelText('toggle completion');
 
@@ -14,9 +14,7 @@ it('should have the status of "checked" on click, if not checked', async () => {
 });
 
 it('should have the status of "unchecked" on click, if checked', async () => {
-  const { getByLabelText } = render(
-    <ExerciseCompletionToggle defaultStatus={true} />,
-  );
+  const { getByLabelText } = render(<CompletionToggle defaultStatus={true} />);
   const user = userEvent.setup();
   const checkbox = getByLabelText('toggle completion');
 
